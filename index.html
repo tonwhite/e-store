@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>T-shirt Store</title>
+</head>
+
+<body>
+    <header>
+        <h1>T-shirt Store</h1>
+        <nav>
+            <button class="menu" onclick="toggleMenu()">☰</button>
+            <ul class="menu-popup" id="menuPopup">
+                <li><a href="#section1">Section 1</a></li>
+                <li><a href="#section2">Section 2</a></li>
+                <li><a href="#section3">Section 3</a></li>
+            </ul>
+            <div class="cart">
+                <button onclick="toggleCartPopup()">
+                    <img src="cart.svg" alt="Cart icon">
+                    <span id="cartCount">0</span>
+                </button>
+                <div class="cart-popup" id="cartPopup">
+                    <!-- Cart items will be displayed here -->
+                </div>
+            </div>
+        </nav>
+    </header>
+    <aside>
+        <h2>Filters</h2>
+        <form id="filterForm">
+            <h3>Price</h3>
+            <label>
+                <input type="radio" name="price" value="all" checked>
+                All
+            </label>
+            <label>
+                <input type="radio" name="price" value="low">
+                $0 - $20
+            </label>
+            <label>
+                <input type="radio" name="price" value="medium">
+                $20 - $30
+            </label>
+            <label>
+                <input type="radio" name="price" value="high">
+                $30+
+            </label>
+        </form>
+    </aside>
+    <main>
+        <div class="tshirt-list" id="tshirtList">
+            <!-- T-shirt cards will be displayed here -->
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+
+</html>
